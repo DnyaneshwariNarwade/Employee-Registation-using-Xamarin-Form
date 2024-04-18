@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Archive>
+  <Name>EmployeeRecord.Android</Name>
+  <PackageName>com.companyname.employee_details</PackageName>
+  <PackageVersionCode>1</PackageVersionCode>
+  <PackageVersionName>1.0</PackageVersionName>
+  <PackageFormat>apk</PackageFormat>
+  <CreationDate>638484326998996460</CreationDate>
+  <SolutionName>Employee_Details</SolutionName>
+  <SolutionPath>D:\Xamarin\Employee_Details\Employee_Details.sln</SolutionPath>
+  <Status></Status>
+  <Configuration>
+    <DebugMode>false</DebugMode>
+  </Configuration>
+  <Comment />
+  <LastUsedKeystore>C:\Users\dnyaneshwarinarwade\AppData\Local\Xamarin\Mono for Android\Keystore\EmployeeRecord\EmployeeRecord.keystore</LastUsedKeystore>
+  <TimeStampingAuthority />
+  <LastInsightsUploadDate>0</LastInsightsUploadDate>
+</Archive>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Employee_Details.Views.UserPage"
+             xmlns:vm="clr-namespace:Employee_Details.ViewModels">
+ <ContentPage.BindingContext>
+        <vm:UserPageViewModel></vm:UserPageViewModel>
+     </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label VerticalOptions="Center" FontSize="Title" TextColor="Black">
+                <Label.FormattedText >
+                    <FormattedString>
+                        <Span Text="Hello "></Span>
+                        <Span Text="{Binding Name}">
+                            
+                        </Span>
+                        <Span Text="!"></Span>
+                    </FormattedString>
+                </Label.FormattedText >
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer  Command="{Binding cmd}"></TapGestureRecognizer>
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

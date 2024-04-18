@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Employee_Details.Views.HomeDetail"
+             xmlns:vm="clr-namespace:Employee_Details.ViewModels"
+             >
+    <ContentPage.BindingContext>
+        <vm:SignInViewModel></vm:SignInViewModel>
+    </ContentPage.BindingContext>
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.6*"  ></RowDefinition>
+            <RowDefinition Height="2*" ></RowDefinition>
+            <RowDefinition Height="*" ></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <BoxView Grid.Row="1" Margin="5" BackgroundColor="White" ></BoxView>
+
+        <Grid Grid.Row="1" Margin="10" >
+
+            <StackLayout Padding="5" Grid.Row="0">
+                <Image  HorizontalOptions="Center" Source="Employee.png" ></Image>
+                <Label  Text="Employee Login" TextColor="Black" HorizontalTextAlignment="Center" FontSize="Title" ></Label>
+                <Entry  Placeholder="Email Id" Text="{Binding Email_ID}" TextColor="black" Keyboard="Email" 
+                        PlaceholderColor="black"></Entry>
+                <Entry  Placeholder="Password" Text="{Binding Password}" Keyboard="Default" TextColor="Black" PlaceholderColor="black" ></Entry>
+                <Button  Text="Login" BackgroundColor="Transparent"  TextColor="Black" BorderColor="blue"  BorderWidth="2" FontAttributes="Bold" Command="{Binding LoginCommand}"></Button>
+                <Label   HorizontalTextAlignment="Center" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="New Employee?" FontSize="Small" TextColor="Black"></Span>
+                            <Span Text="SignUpNow" TextColor="Blue" FontSize="Small"  ></Span>
+                        </FormattedString>
+                        
+                    </Label.FormattedText>
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" Command="{Binding SignupCommand}"></TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+
+
+
+
+
+
+        </Grid>
+
+
+
+
+
+
+    </Grid>
+</ContentPage>

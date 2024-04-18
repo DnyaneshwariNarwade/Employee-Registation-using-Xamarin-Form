@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Employee_Details.Views.Signup"
+             xmlns:vm="clr-namespace:Employee_Details.ViewModels">
+    <ContentPage.BindingContext>
+        <vm:SignupViewModel></vm:SignupViewModel>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.1*"></RowDefinition>
+                <RowDefinition Height="0.8*"></RowDefinition>
+
+            </Grid.RowDefinitions>
+            <Label Text=" Registration Form" FontSize="Title" HorizontalOptions="Center" TextColor="blue" VerticalOptions="End" ></Label>
+            <StackLayout Grid.Row="1"  Padding="20">
+
+                <Entry BackgroundColor="White" Text="{Binding FirstName}" Placeholder="FirstName" Keyboard="Text"></Entry>
+                <Entry Text="{Binding LatName}" Placeholder="LastName" Keyboard="Text"></Entry>
+                <Entry Text="{Binding Email}" Placeholder="Email Id" Keyboard="Email"></Entry>
+                <Entry Text="{Binding MoblileNo}" Placeholder="Mobile No" Keyboard="Telephone"></Entry>
+                <Entry Text="{Binding Password}" IsPassword="True"  Placeholder="Password" Keyboard="Default"></Entry>
+
+                <Button Margin="30"  Text="Submit" TextColor="blue" BorderColor="Blue" BorderWidth="2" BackgroundColor="Transparent" Command="{Binding submitCommand}"></Button>
+
+                
+                
+
+            </StackLayout>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
